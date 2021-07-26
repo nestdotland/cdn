@@ -36,6 +36,6 @@
     "printWidth": 120
   },
   "engines": {
-    "node": "16"
+    "node": "14"
   }
 }
