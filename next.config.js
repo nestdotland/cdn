@@ -3,17 +3,12 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: '/:path*',
-        destination: '/api?s=:path*',
+        source: '/.well-known/deno-import-intellisense.json',
+        destination: '/deno-import-intellisense.json',
       },
-    ];
-  },
-  async redirects() {
-    return [
       {
-        source: '/',
-        destination: 'https://nest.land',
-        permanent: true,
+        source: '/:path*',
+        destination: '/api/cdn?s=:path*',
       },
     ];
   },
