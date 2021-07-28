@@ -6,19 +6,19 @@
       "variables": [
         {
           "key": "user",
-          "url": "https://api-dev.nest.land/imports/x"
+          "url": "https://api.nest.land/imports/x"
         },
         {
           "key": "module",
-          "url": "https://api-dev.nest.land/imports/x/${user}"
+          "url": "https://api.nest.land/imports/x/${user}"
         },
         {
           "key": "version",
-          "url": "https://api-dev.nest.land/imports/x/${user}/${module}"
+          "url": "https://api.nest.land/imports/x/${user}/${module}"
         },
         {
           "key": "path",
-          "url": "https://api-dev.nest.land/imports/x/${user}/${module}/${version}"
+          "url": "https://api.nest.land/imports/x/${user}/${module}/${version}"
         }
       ]
     }
