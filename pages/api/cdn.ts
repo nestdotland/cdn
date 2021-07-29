@@ -56,9 +56,9 @@ const handler: NextApiHandler = async (req, res) => {
         res.setHeader('Content-Type', mimeType);
         res.setHeader('Cache-Control', [
           'public',
-          'maxage=21600',
-          's-maxage=21600',
-          'stale-while-revalidate=21600',
+          'maxage=31536000',
+          's-maxage=31536000',
+          'stale-while-revalidate=31536000',
           'immutable',
         ]);
 
