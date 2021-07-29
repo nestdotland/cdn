@@ -7,22 +7,22 @@ const handler: NextApiHandler = async (req, res) => {
   const match = /^([^\/@]+)\/([^\/@]+)@([^\/]+)\/(.*)$/.exec(slug);
 
   if (!match) {
-    res.status(400);
+    res.status(404);
     res.end();
   } else {
     const [, authorName, moduleName, versionName, filepath] = match;
 
     if (!authorName) {
-      res.status(400);
+      res.status(404);
       res.end();
     } else if (!moduleName) {
-      res.status(400);
+      res.status(404);
       res.end();
     } else if (!versionName) {
-      res.status(400);
+      res.status(404);
       res.end();
     } else if (!filepath) {
-      res.status(400);
+      res.status(404);
       res.end();
     } else {
       let { data: Files, error } = await supabase
