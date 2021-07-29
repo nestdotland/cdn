@@ -8,22 +8,22 @@ const handler: NextApiHandler = async (req, res) => {
 
   if (!match) {
     res.status(400);
-    res.end(`Invalid URL`);
+    res.end();
   } else {
     const [, authorName, moduleName, versionName, filepath] = match;
 
     if (!authorName) {
       res.status(400);
-      res.end(`Author not provided!`);
+      res.end();
     } else if (!moduleName) {
       res.status(400);
-      res.end(`Module not provided!`);
+      res.end();
     } else if (!versionName) {
       res.status(400);
-      res.end(`Version not provided!`);
+      res.end();
     } else if (!filepath) {
       res.status(400);
-      res.end(`Path not provided!`);
+      res.end();
     } else {
       let { data: Files, error } = await supabase
         .from('File')
@@ -35,16 +35,15 @@ const handler: NextApiHandler = async (req, res) => {
 
       if (error) {
         res.status(500);
-        res.end(`Internal Server Error`);
+        res.end();
         throw new Error(`${error.message} (hint: ${error.hint})`);
       } else if (Files.length < 1) {
         res.status(404);
-        res.end('Not Found');
+        res.end();
       } else if (Files.length > 1) {
         // more than one files with same primary key @@id([author, module, version, path])
         res.status(500);
-        res.end(`Internal Server Error`);
-        console.error("Wait, that's illegal!!!");
+        res.end();
         throw new Error(
           `Found ${Files.length} "Files" with primary key @@id([${authorName}, ${moduleName}, ${versionName}, ${filepath}])`
         );
