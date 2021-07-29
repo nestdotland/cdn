@@ -2,7 +2,7 @@
   "version": 1,
   "registries": [
     {
-      "schema": "/:user([a-zA-Z0-9_]*)/:module([a-zA-Z0-9_]*)@:version([a-z0-9-]*)/:path*",
+      "schema": "/:user([a-zA-Z0-9_]*)/:module([a-zA-Z0-9_]*)@:version([a-z0-9-.]*)/:path*",
       "variables": [
         {
           "key": "user",
