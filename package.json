@@ -17,16 +17,15 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.25.1",
-    "next": "^11.1.2",
+    "next": "^12.0.0",
     "node-fetch": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@types/node-fetch": "^3.0.3",
-    "@types/react": "^17.0.32",
+    "@types/react": "^17.0.33",
     "eslint": "7.32.0",
-    "eslint-config-next": "^11.1.2",
+    "eslint-config-next": "^12.0.0",
     "prettier": "^2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
@@ -36,6 +35,6 @@
     "printWidth": 120
   },
   "engines": {
-    "node": "14"
+    "node": ">=14"
   }
 }
